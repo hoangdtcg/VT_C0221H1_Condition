@@ -1,0 +1,43 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Kiểm Tra năm nhuận</title>
+</head>
+<body>
+
+<script>
+    /*
+    * var thay bằng let.
+    * nên đặt tên biến là tiếng anh.
+    * parseInt/parseFloat: ép kiểu về số nguyên/số thực
+    * Number - ép kiểu về số (+)
+    * đặt tên biến theo chuẩn cameo - thisIsVariable
+    * */
+    var year = parseInt(prompt("Nhập năm. Enter để kiểm tra"));
+
+    var Namnhuan = false;
+    var chiahetcho4 = (year % 4 == 0);//true/false
+    if (chiahetcho4){
+        var chiahetcho100 = (year % 100 == 0);//true/false;
+        if (chiahetcho100) {
+            var chiahetcho400 = year % 400 === 0;
+            if (chiahetcho400) {
+                Namnhuan = true;
+            } else {
+                Namnhuan = true;
+            }
+        }
+    }
+
+
+    if (Namnhuan) {
+        alert(year + " Là năm nhuận")
+    } else {
+        alert(year + " Không phải năm nhuận")
+    }
+
+</script>
+
+</body>

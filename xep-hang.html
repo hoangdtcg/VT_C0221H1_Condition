@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Xếp hạng học lực </title>
+</head>
+<body>
+<script>
+    let diemKiemTra = +prompt("Nhập điểm kiểm tra: ");
+    let diemGiuaKy = +prompt("Nhập điểm giữa kỳ: ");
+    let diemThi = +prompt("Nhập điểm thi: ");
+
+    let diemTrungBinh = (diemKiemTra + diemGiuaKy*2 + diemThi*3)/6;
+    diemTrungBinh = diemTrungBinh.toFixed(2);
+
+    let rank = '';
+    let rankA = 75;
+    let rankB = 60;
+    let rankC = 45;
+
+    if(diemTrungBinh > rankA){
+        rank = 'A';
+    }else if(diemTrungBinh > rankB){
+        rank = 'B';
+    }else if(diemTrungBinh > rankC){
+        rank = 'C';
+    }else{
+        rank = 'D';
+    }
+
+    alert("Điểm: "+ diemTrungBinh + '. Xep hang '+ rank)
+</script>
+</body>
+</html>
